@@ -168,5 +168,68 @@ namespace First_Practice
 
             Console.WriteLine("Max Number of Trailing Vowels: {0}", counts.Max());
         }
+
+        public static void TwoDimensionalFunc()
+        {
+            int[,] myArray = new int[2, 3]
+            {
+                {1,2,3},
+                {4,5,6},
+            };
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.WriteLine(myArray[i, j]);
+                }
+            }
+
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                Console.Write("[");
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i, j] + " ");
+                }
+                Console.Write("]");
+                Console.Write("\n");
+            }
+
+            foreach(int items in myArray)
+            {
+                Console.WriteLine(items);
+            }
+        }
+
+        public static void TwoDJaggedArrayFunc()
+        {
+            //Row must be fixed, but columns can be changed
+            int[][] myArray = new int[3][];
+
+            myArray[0] = new[] { 1, 2, 3 };
+            myArray[1] = new[] { 4, 5, 6, 7, 8 };
+            myArray[2] = new[] { 9, 10, 11 };
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                Console.Write("[");
+                for (int j = 0; j < myArray[i].Length; j++)
+                {
+                    Console.Write(myArray[i][j] + " ");
+                }
+                Console.Write("]");
+                Console.Write("\n");
+            };
+
+            foreach (int[] items in myArray)
+            {
+                foreach (int i in items)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
     }
 }

@@ -29,11 +29,17 @@ namespace First_Practice
             //Console.WriteLine("\n\n--------------CALCULATOR-------------");
             //Functions.Calculator();
 
-            Console.WriteLine("\n\n--------------FOR LOOPS-------------");
-            Functions.ForLoopFunc();
+            //Console.WriteLine("\n\n--------------FOR LOOPS-------------");
+            //Functions.ForLoopFunc();
 
-            Console.WriteLine("\n\n--------------VOWELS COUNT-------------");
-            Functions.VowelsCountFunc();
+            //Console.WriteLine("\n\n--------------VOWELS COUNT-------------");
+            //Functions.VowelsCountFunc();
+
+            //Console.WriteLine("\n\n--------------2D ARRAYS-------------");
+            //Functions.TwoDimensionalFunc();
+
+            Console.WriteLine("\n\n--------------2D JAGGED ARRAYS-------------");
+            Functions.TwoDJaggedArrayFunc();
         }
     }
 }

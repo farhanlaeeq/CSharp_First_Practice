@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -230,6 +231,26 @@ namespace First_Practice
                     Console.WriteLine(i);
                 }
             }
+        }
+
+        public static void HashingFunction()
+        {
+            string passwordString = "";
+            Console.WriteLine("Enter your password: ");
+            passwordString = Console.ReadLine();
+
+            byte[] saltBytes = new byte[32];
+            RandomNumberGenerator.Create().GetBytes(saltBytes);
+            string salt = Convert.ToBase64String(saltBytes);
+
+            byte[] saltedPassword = Encoding.UTF8.GetBytes(passwordString + salt);
+            byte[] hashedBytes = SHA256.Create().ComputeHash(saltedPassword);
+
+            Console.WriteLine(Convert.ToBase64String(hashedBytes));
+            Console.WriteLine(salt);
+
+
+            Console.WriteLine(passwordString);
         }
     }
 }

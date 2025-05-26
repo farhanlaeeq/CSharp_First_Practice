@@ -38,8 +38,11 @@ namespace First_Practice
             //Console.WriteLine("\n\n--------------2D ARRAYS-------------");
             //Functions.TwoDimensionalFunc();
 
-            Console.WriteLine("\n\n--------------2D JAGGED ARRAYS-------------");
-            Functions.TwoDJaggedArrayFunc();
+            //Console.WriteLine("\n\n--------------2D JAGGED ARRAYS-------------");
+            //Functions.TwoDJaggedArrayFunc();
+
+            Console.WriteLine("\n\n--------------HASHING FUNCTION-------------");
+            Functions.HashingFunction();
         }
     }
 }
